@@ -1,16 +1,16 @@
-import Button from './components/Button'
 import Sidebar from './components/Sidebar'
-import ModelCard from './components/ModelCard'
-import ToolCard from './components/ToolCard'
-
+import ModelPage from './components/ModelPage'
+import ToolPage from './components/ToolPage';
+import { useState } from 'react'
 
 function App(): React.JSX.Element {
+  const [render, setRender] = useState("Home");
+
   return (
     <>
-      <Button content="Click Me"/>
       <Sidebar/>
-      <ModelCard/>
-      <ToolCard title="calculator" type="local integration" description="this is the description of the calculator tool"/>
+      <ModelPage/>
+      <ToolPage/>
     </>
   )
 }

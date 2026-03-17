@@ -3,7 +3,7 @@ import Button from "./Button"
 
 function ModelCard(): React.JSX.Element{
     return (
-        <div id="model card" className="grid justify-center bg-zinc-100 grid-rows-3 gap-6 items-center rounded-lg">
+        <div id="model card" className="grid justify-center bg-zinc-100 grid-rows-3 gap-6 items-center rounded-lg w-fit p-6">
             <div>
                 <div>
                     gpt-oss:20b

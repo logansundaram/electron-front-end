@@ -8,3 +8,6 @@ function Popup(): React.JSX.element{
         </div>
     )
 }
+
+
+export defualt Popup
