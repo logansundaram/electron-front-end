@@ -1,4 +1,6 @@
 import ModelCard from "./ModelCard"
+import ContentHeader from "./ContentHeader"
+import PageHeader from "./PageHeader"
 
 
 function ModelPage(): React.JSX.Element{
@@ -8,24 +10,10 @@ function ModelPage(): React.JSX.Element{
         <div className="gap-4 ml-40 p-10">
 
 
-            <div className="p-4">
-                <div className="text-6xl">
-                    models
-                </div>
-                <div>
-                    view all local and cloud models.
-                </div>
-            </div>
+            <PageHeader hero="models" framer="view all local and cloud models"/>
 
             <div className="p-4">
-                <div className="p-4">
-                    <div className="text-2xl p">
-                        local models
-                    </div>
-                    <div>
-                        models ran on your machine. no data shared, ever.
-                    </div>
-                </div>
+                <ContentHeader title="local models" framer="models ran on your machine. no data shared, ever."/>
                 <div className="grid grid-cols-3 p-4 grid-rows-2 gap-4">
                     <ModelCard/>
                     <ModelCard/>
@@ -37,13 +25,8 @@ function ModelPage(): React.JSX.Element{
             </div>
 
 
-            <div className="p-10">
-                <div className="text-2xl">
-                    cloud models
-                </div>
-                <div>
-                    for when the best and smartest LLM's are required.
-                </div>
+            <div className="p-4">
+                <ContentHeader title="cloud models" framer="for when the smartest LLM's are necessary"/>
                 <div className="grid grid-cols-3 gap-2">
                     <ModelCard/>
                     <ModelCard/>
