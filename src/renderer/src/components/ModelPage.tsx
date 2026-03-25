@@ -1,9 +1,12 @@
 import ModelCard from "./ModelCard"
 import ContentHeader from "./ContentHeader"
 import PageHeader from "./PageHeader"
+import { useState } from "react"
 
 
 function ModelPage(): React.JSX.Element{
+    const [grid, setGrid] = useState(true);
+
     return (
         //hardcoded 40 widebar width
         //need to add a header component later

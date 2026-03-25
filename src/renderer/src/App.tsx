@@ -1,17 +1,34 @@
 import Sidebar from './components/Sidebar'
-import ModelPage from './components/ModelPage'
+import ChatPage from './components/ChatPage';
+import ProjectPage from './components/ProjectPage';
 import ToolPage from './components/ToolPage';
+import ModelPage from './components/ModelPage'
+import BuilderPage from './components/BuilderPage';
 import { useState } from 'react'
+import WorkflowPage from './components/WorkflowPage';
 
 function App(): React.JSX.Element {
-  const [render, setRender] = useState("Home");
+  const [page, setPage] = useState('model');
+
+  const changePage = (newPage) => {
+    setPage(newPage);
+  }
 
   return (
-    <>
-      <Sidebar/>
-      <ModelPage/>
-      <ToolPage/>
-    </>
+    <div>
+      <Sidebar setPage={changePage}/>
+      { 
+        page == 'chat' ?  <ChatPage/>  :       
+        page == 'project' ?  <ProjectPage/>  :       
+        page == 'tool' ?  <ToolPage/>  :       
+        page == 'model' ?  <ModelPage/>  :       
+        page == 'workflow' ?  <WorkflowPage/>  :       
+        page == 'builder' ?  <BuilderPage/>  :   
+        <div>
+          404
+        </div>
+      }
+    </div>
   )
 }
 
