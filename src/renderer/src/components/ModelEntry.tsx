@@ -2,7 +2,7 @@ import Pill from "./Pill";
 //todo: make the pill component color configurable so it more modular
 import Button from "./Button";
 
-
+//todo: make custom css classes using tailwind to speed up development, especially with the parent div classes that are the same for every class
 function ModelEntry() : React.JSX.Element {
     return (
         <div className="bg-zinc-100 grid grid-cols-3 p-4 rounded-lg">
