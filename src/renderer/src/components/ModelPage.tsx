@@ -4,8 +4,17 @@ import PageHeader from "./PageHeader"
 import { useState } from "react"
 
 
+/*interface changePageProps{
+    check: boolean;
+}*/
+
+
 function ModelPage(): React.JSX.Element{
     const [grid, setGrid] = useState(true);
+
+    const setState = (check: boolean) => {
+        setGrid(check);
+    }
 
     return (
         //hardcoded 40 widebar width
@@ -16,7 +25,7 @@ function ModelPage(): React.JSX.Element{
             <PageHeader hero="models" framer="view all local and cloud models"/>
 
             <div className="p-4">
-                <ContentHeader title="local models" framer="models ran on your machine. no data shared, ever."/>
+                <ContentHeader title="local models" framer="models ran on your machine. no data shared, ever." setGrid={setState}/>
                 <div className="grid grid-cols-3 p-4 grid-rows-2 gap-4">
                     <ModelCard/>
                     <ModelCard/>

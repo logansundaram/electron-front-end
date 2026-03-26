@@ -4,10 +4,11 @@ import { TextAlignJustify } from "lucide-react";
 interface ContentHeaderProps{
     title: string;
     framer: string;
+    setGrid: Dispatch<SetStateAction<string>>;
 }
 
 
-function ContentHeader({title, framer} : ContentHeaderProps): React.JSX.Element {
+function ContentHeader({title, framer, setGrid} : ContentHeaderProps): React.JSX.Element {
     return (
         <div className="p-4 grid grid-cols-6">
             <div className="col-span-5">

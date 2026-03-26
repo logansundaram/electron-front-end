@@ -1,3 +1,6 @@
+import Button from "./Button";
+
+
 interface ToolCardProps{
     title: string;
     type: string;
@@ -6,7 +9,7 @@ interface ToolCardProps{
 
 function ToolCard({title, type, description} : ToolCardProps): React.JSX.Element{
     return (
-        <div className="grid justify-center bg-zinc-100 m-10 grid-rows-2 gap-4">
+        <div className="grid justify-center bg-zinc-100 grid-rows-4 gap-2 p-5 w-fit h-min rounded-lg">
             <div>
                 <div>
                     {title}
@@ -19,6 +22,30 @@ function ToolCard({title, type, description} : ToolCardProps): React.JSX.Element
                 <div>
                     {description}
                 </div>
+            </div>
+
+            <div className="grid grid-cols-2">
+                <div>
+                    <div>
+                        success rate
+                    </div>
+                    <div>
+                        100%
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        latency
+                    </div>
+                    <div>
+                        5ns
+                    </div>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-2">
+                <Button content="configure"/>
+                <Button content="delete tool"/>
             </div>
         </div>
     )
