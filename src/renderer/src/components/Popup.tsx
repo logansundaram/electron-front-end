@@ -1,13 +1,5 @@
-
-
-
-function Popup(): React.JSX.element{
-    return (
-        <div>
-            
-        </div>
-    )
+function Popup(): React.JSX.Element {
+  return <div></div>
 }
 
-
-export defualt Popup
+export default Popup

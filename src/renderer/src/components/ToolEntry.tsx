@@ -9,7 +9,7 @@ interface ToolCardProps{
 
 function ToolCard({title, type, description} : ToolCardProps): React.JSX.Element{
     return (
-        <div className="grid justify-center bg-zinc-100 grid-rows-5 gap-2 p-5 w-fit h-min rounded-lg">
+        <div className="grid justify-center bg-zinc-100 grid-rows-4 gap-2 p-5 w-fit h-min rounded-lg">
             <div>
                 <div>
                     {title}
@@ -27,32 +27,18 @@ function ToolCard({title, type, description} : ToolCardProps): React.JSX.Element
             <div className="grid grid-cols-2">
                 <div>
                     <div>
-                        failure rate
+                        success rate
                     </div>
                     <div>
-                        3%
+                        100%
                     </div>
                 </div>
                 <div>
                     <div>
-                        avg runtime
+                        latency
                     </div>
                     <div>
                         5ns
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    last used:
-                </div>
-                <div className="text-xs flex gap-4">
-                    <div>
-                        march 5th, 2026
-                    </div>
-                    <div>
-                        success
                     </div>
                 </div>
             </div>

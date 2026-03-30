@@ -1,15 +1,12 @@
-interface PillProps{
-    content: string;
+interface PillProps {
+  content: string
+  color?: string
 }
 
-
-function Pill({content} : PillProps){
-    return (
-        <div className="">
-            {content}
-        </div>
-    )
+function Pill({ content, color }: PillProps) {
+  return (
+    <div className={`btn-secondary whitespace-nowrap${color ? ` ${color}` : ''}`}>{content}</div>
+  )
 }
-
 
 export default Pill

@@ -14,7 +14,7 @@ function ModelPage(): React.JSX.Element{
     const [grid, setGrid] = useState(true);
 
     const gridView = (
-        <div className="grid grid-cols-3 p-4 grid-rows-2 gap-4">
+        <div className="grid grid-cols-3 p-4 gap-4 place-items-center">
             <ModelCard/>
             <ModelCard/>
             <ModelCard/>
