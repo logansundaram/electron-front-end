@@ -11,7 +11,7 @@ function Link({ text, icon: Icon, framer }: LinkProps) {
     <div className="flex h-min items-center gap-2 rounded-lg p-2 hover:bg-zinc-200">
       <Icon />
       <div>
-        <div className="">{text}</div>
+        <div className="text-sm">{text}</div>
         <div className="text-xs">{framer}</div>
       </div>
     </div>
