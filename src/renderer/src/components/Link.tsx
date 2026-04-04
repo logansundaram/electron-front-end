@@ -1,20 +1,22 @@
-import { type LucideIcon } from 'lucide-react' //
+import { type LucideIcon } from 'lucide-react'
+import { Dispatch, SetStateAction } from 'react'
 
 interface LinkProps {
   text: string
   icon: LucideIcon
-  framer?: string
+  setPageLink: Dispatch<SetStateAction<string>>
+  page: string
 }
 
-function Link({ text, icon: Icon, framer }: LinkProps) {
+function Link({ text, icon: Icon, setPageLink, page }: LinkProps) {
   return (
-    <div className="flex h-min items-center gap-2 rounded-lg p-2 hover:bg-zinc-200">
-      <Icon />
-      <div>
-        <div className="text-sm">{text}</div>
-        <div className="text-xs">{framer}</div>
-      </div>
-    </div>
+    <button
+      onClick={() => setPageLink(page)}
+      className="flex items-center gap-2 rounded-lg text-left px-4 py-2 hover:bg-zinc-200 w-full"
+    >
+      <Icon size={14} />
+      <div className="text-sm">{text}</div>
+    </button>
   )
 }
 
