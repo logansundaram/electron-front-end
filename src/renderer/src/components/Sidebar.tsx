@@ -1,7 +1,9 @@
 import Link from './Link'
 import SysterMonitor from './SystemMonitor'
 import SearchBar from './SearchBar'
+import { Search } from 'lucide-react'
 import { MessagesSquare, Pencil } from 'lucide-react'
+import { ListTodo } from 'lucide-react'
 import { Settings } from 'lucide-react'
 import { Hammer } from 'lucide-react'
 import { Brain } from 'lucide-react'
@@ -20,15 +22,13 @@ function Sidebar({ setPage }: SidebarProps): React.JSX.Element {
   return (
     <div
       id="sidebar"
-      className="fixed top-0 left-0 h-screen flex-col w-40 rounded-r-lg bg-zinc-100 p-2 text-black"
+      className="fixed top-0 left-0 flex h-screen w-40 flex-col rounded-r-lg bg-zinc-100 p-2 text-black"
     >
       <div className="">
         <div id="header" className="text-blue-950 py-2 px-4 text-xl">
           <button>saturday.ai</button>
         </div>
         <div className="">
-          <SearchBar />
-          <hr className="bg-black m-1" />
           <Link text="chat" icon={MessagesSquare} setPageLink={setPage} page="chat" />
           <Link text="agent" icon={Bot} setPageLink={setPage} page="project" />
           <hr className="bg-black m-1" />
@@ -36,15 +36,19 @@ function Sidebar({ setPage }: SidebarProps): React.JSX.Element {
           <Link text="workflows" icon={TrendingUpDown} setPageLink={setPage} page="workflow" />
           <Link text="tools" icon={Hammer} setPageLink={setPage} page="tool" />
           <Link text="models" icon={Brain} setPageLink={setPage} page="model" />
+          <hr className="bg-black m-1" />
+          <Link text="search" icon={Search} setPageLink={setPage} page="chat" />
         </div>
       </div>
 
-      <SearchBarExpandable header="previous agents" />
+      <SearchBarExpandable header="recent agents" />
 
-      <SearchBarExpandable header="previous chats" />
-
-      <div id="footer" className="mt-auto p-2">
-        <Settings onClick={() => setPage('configure')} className="rounded-lg hover:bg-zinc-200" />
+      <SearchBarExpandable header="recent chats" />
+      <div id="footer" className="mt-auto rounded-lg bg-zinc-200">
+        <SysterMonitor />
+        <div className="hover:bg-black hover:text-white">
+          <Link text="settings" icon={Settings} setPageLink={setPage} page="configure" />
+        </div>
       </div>
     </div>
   )
