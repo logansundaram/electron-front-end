@@ -1,4 +1,5 @@
 import Sidebar from './components/Sidebar'
+import Sidebarv1 from './components/Sidebarv1'
 import ChatPage from './components/ChatPage'
 import ProjectPage from './components/ProjectPage'
 import ToolPage from './components/ToolPage'
@@ -17,7 +18,7 @@ function App(): React.JSX.Element {
 
   return (
     <div>
-      <Sidebar setPage={changePage} />
+      <Sidebarv1 setPage={changePage} />
       {page == 'chat' ? (
         <ChatPage />
       ) : page == 'project' ? (
