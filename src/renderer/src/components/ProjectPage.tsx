@@ -1,13 +1,14 @@
 import PageHeader from './PageHeader'
-import ProjectConfigurator from './ProjectConfigurator'
 import InputPill from './InputPill'
+import RecentChats from './RecentChats'
 
-function ProjectPage() {
+function ProjectPage(): React.JSX.Element {
   return (
-    <div className="gap-4 ml-40 p-10">
-      <PageHeader hero="projects" framer="for more in-depth and rigourous work" />
-      <ProjectConfigurator />
-      
+    //hardcoded width need to be fixed
+    <div className="min-h-screen ml-15">
+      <RecentChats />
+      <PageHeader hero="chat" framer="for one-off convos and light work" />
+      <InputPill />
     </div>
   )
 }

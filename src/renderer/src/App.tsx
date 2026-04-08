@@ -1,4 +1,5 @@
 import Sidebar from './components/Sidebar'
+import BottomBar from './components/BottomBar'
 import Sidebarv1 from './components/Sidebarv1'
 import ChatPage from './components/ChatPage'
 import ProjectPage from './components/ProjectPage'
@@ -36,6 +37,7 @@ function App(): React.JSX.Element {
       ) : (
         <div>404</div>
       )}
+      <BottomBar />
     </div>
   )
 }

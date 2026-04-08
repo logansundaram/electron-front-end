@@ -1,13 +1,12 @@
-import PageHeader from "./PageHeader";
-import InputPill from "./InputPill";
+import RecentChats from './RecentChats'
 
-function ChatPage() : React.JSX.Element{
-    return (
-        <div className="min-h-screen gap-4 ml-40 p-10 pb-36">
-            <PageHeader hero="chat" framer="for one-off convos and light work"/>
-            <InputPill/>
-        </div>
-    )
+function ChatPage(): React.JSX.Element {
+  return (
+    //hardcoded width need to be fixed
+    <div className="min-h-screen ml-15">
+      <RecentChats />
+    </div>
+  )
 }
 
-export default ChatPage;
+export default ChatPage
